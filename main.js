@@ -12,7 +12,7 @@ fastify.register(apiRoute, { prefix: '/api' })
 
 const start = async () => {
     try {
-        const server = await fastify.listen('http://139.162.157.130:8855/')
+        const server = await fastify.listen(8855, '0.0.0.0')
         console.log(`Server running on ${server}`)
     } catch (err) {
         fastify.log.error(err)
